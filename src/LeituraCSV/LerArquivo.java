@@ -116,30 +116,30 @@ public class LerArquivo {
         lista.add(m);
 
         //imprimir
-        System.out.println("Nome da Musica: " + nome_musica);
-        System.out.println("Nome do(s) Artista(s): " + nome_artista);
-        System.out.println("Numero de Artistas: " + numero_artistas);
-        System.out.println("Ano Lançado: " + ano_lancado);
-        System.out.println("Mês Lançado: " + mes_lancado);
-        System.out.println("Dia Lançado: " + dia_lancado);
-        System.out.println("Numero de Playlists no Spotify: " + spotify_numero_playlist);
-        System.out.println("Ranking no Spotify: " + spotify_ranking);
-        System.out.println("Total de Streams no Spotify: " + streams);
-        System.out.println("Numero de Playlists na Apple: " + apple_numero_playlist);
-        System.out.println("Ranking na Apple: " + apple_ranking);
-        System.out.println("Numero de Playlists no Deezer: " + deezer_numero_playlist);
-        System.out.println("Ranking no Deezer: " + deezer_ranking);
-        System.out.println("Ranking no Shazam: " + shazam_ranking);
-        System.out.println("Batidas por minuto (tempo): " + bpm);
-        System.out.println("Nota musical (key): " + key);
-        System.out.println("Modo: " + mode);
-        System.out.println("Dançabilidade: " + danceability);
-        System.out.println("Valência: " + valence);
-        System.out.println("Energia: " + energy);
-        System.out.println("Acusticidade: " + acousticness);
-        System.out.println("Instrumentalidade: " + instrumentalness);
-        System.out.println("Vivacidade: " + liveness);
-        System.out.println("Fala: " + speechiness+"\n\n");
+        //System.out.println("Nome da Musica: " + nome_musica);
+        //System.out.println("Nome do(s) Artista(s): " + nome_artista);
+        //System.out.println("Numero de Artistas: " + numero_artistas);
+        //System.out.println("Ano Lançado: " + ano_lancado);
+        //System.out.println("Mês Lançado: " + mes_lancado);
+        //System.out.println("Dia Lançado: " + dia_lancado);
+        //System.out.println("Numero de Playlists no Spotify: " + spotify_numero_playlist);
+        //System.out.println("Ranking no Spotify: " + spotify_ranking);
+        //System.out.println("Total de Streams no Spotify: " + streams);
+        //System.out.println("Numero de Playlists na Apple: " + apple_numero_playlist);
+        //System.out.println("Ranking na Apple: " + apple_ranking);
+        //System.out.println("Numero de Playlists no Deezer: " + deezer_numero_playlist);
+        //System.out.println("Ranking no Deezer: " + deezer_ranking);
+        //System.out.println("Ranking no Shazam: " + shazam_ranking);
+        //System.out.println("Batidas por minuto (tempo): " + bpm);
+        //System.out.println("Nota musical (key): " + key);
+        //System.out.println("Modo: " + mode);
+        //System.out.println("Dançabilidade: " + danceability);
+        //System.out.println("Valência: " + valence);
+        //System.out.println("Energia: " + energy);
+        //System.out.println("Acusticidade: " + acousticness);
+        //System.out.println("Instrumentalidade: " + instrumentalness);
+        //System.out.println("Vivacidade: " + liveness);
+        //System.out.println("Fala: " + speechiness+"\n\n");
   
       }
       leitor.close();
