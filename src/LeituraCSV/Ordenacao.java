@@ -9,5 +9,18 @@ public class Ordenacao extends LerArquivo{
         // instanciando lista do CSV
         ArrayList<Musica> lista = ListarMusicas();
         System.out.println(lista);
+
+    }
+
+    public void InsercaoMusica(){
+
+    }
+
+    public void SelescaoArtista(){
+        
+    }
+
+    public void InsercaoArtista(){
+        
     }
 }
