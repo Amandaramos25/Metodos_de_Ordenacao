@@ -8,12 +8,12 @@ public class Musica {
     private int dia_lancado;
     private int spotify_numero_playlist;
     private int spotify_ranking;
-    private int streams;
+    private String streams;
     private int apple_numero_playlist;
     private int apple_ranking;
-    private int deezer_numero_playlist;
+    private String deezer_numero_playlist;
     private int deezer_ranking;
-    private int shazam_ranking;
+    private double shazam_ranking;
     private int bpm;
     private String key;
     private String mode;
@@ -32,8 +32,8 @@ public class Musica {
 
 
     public Musica(String nome_musica, String nome_artista, int numero_artistas, int ano_lancado, int mes_lancado,
-            int dia_lancado, int spotify_numero_playlist, int spotify_ranking, int streams, int apple_numero_playlist,
-            int apple_ranking, int deezer_numero_playlist, int deezer_ranking, int shazam_ranking, int bpm, String key,
+            int dia_lancado, int spotify_numero_playlist, int spotify_ranking, String streams, int apple_numero_playlist,
+            int apple_ranking, String deezer_numero_playlist, int deezer_ranking, double shazam_ranking, int bpm, String key,
             String mode, int danceability, int valence, int energy, int acousticness, int instrumentalness,
             int liveness, int speechiness) {
         this.nome_musica = nome_musica;
@@ -143,12 +143,12 @@ public class Musica {
     }
 
 
-    public int getStreams() {
+    public String getStreams() {
         return streams;
     }
 
 
-    public void setStreams(int streams) {
+    public void setStreams(String streams) {
         this.streams = streams;
     }
 
@@ -173,12 +173,12 @@ public class Musica {
     }
 
 
-    public int getDeezer_numero_playlist() {
+    public String getDeezer_numero_playlist() {
         return deezer_numero_playlist;
     }
 
 
-    public void setDeezer_numero_playlist(int deezer_numero_playlist) {
+    public void setDeezer_numero_playlist(String deezer_numero_playlist) {
         this.deezer_numero_playlist = deezer_numero_playlist;
     }
 
@@ -193,12 +193,12 @@ public class Musica {
     }
 
 
-    public int getShazam_ranking() {
+    public double getShazam_ranking() {
         return shazam_ranking;
     }
 
 
-    public void setShazam_ranking(int shazam_ranking) {
+    public void setShazam_ranking(double shazam_ranking) {
         this.shazam_ranking = shazam_ranking;
     }
 

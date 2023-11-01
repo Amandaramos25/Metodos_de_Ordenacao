@@ -9,7 +9,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Ordenacao od = new Ordenacao();
 
-        System.out.println("Digite qual metodo de ordenação deseja fazer: \n1. Seleção pelo nome da música\n2. Inserção pelo nome da música \n3.Seleção pelo nome do artista \n4. Inserção pelo nome do artista"); 
+        System.out.println("-------------------\nDigite qual metodo de ordenação deseja fazer: \n1. Seleção pelo nome da música\n2. Inserção pelo nome da música \n3.Seleção pelo nome do artista \n4. Inserção pelo nome do artista\n-------------------------"); 
         int op = sc.nextInt();
         
         switch(op){
