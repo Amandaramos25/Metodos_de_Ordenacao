@@ -19,12 +19,15 @@ public class Main {
             break;
           case 2:
             System.out.println("Inserção pelo nome da música: ");
+            od.InsercaoMusica();
             break;
           case 3:
             System.out.println("Seleção pelo nome do artista: ");
+            od.SelecaoArtista();
             break;
           case 4:
             System.out.println("Inserção pelo nome do artista: ");
+            od.InsercaoArtista();
             break;
           default:
             break;
