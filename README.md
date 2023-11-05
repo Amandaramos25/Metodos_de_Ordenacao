@@ -36,7 +36,7 @@ momento não estamos preocupados com o tamanho do arquivo.
 Fonte do dataset: https://www.kaggle.com/datasets/nelgiriyewithana/top-spotify-songs-
 2023/data
 
--------------------------------------------------------------------------------------------------
+_____________________________________________________________________________
 
 TP1 – Parte 2
 
@@ -46,6 +46,34 @@ Nesta etapa você deverá implementar os algoritmos de ordenação por seleção
 Ordene seus dados em ambos os métodos primeiramente pelo nome da música e depois faça
 uma nova ordenação em ambos os métodos pelo nome do artista. Capture o tempo gasto para
 cada ordenação.
+Registre em arquivo texto o tempo de cada ordenação (não é necessário fazer este registro pelo
+programa, pode ser feito manualmente pelo aluno ou grupo), além disso calcule quantas
+operações foram feitas com o volume de dados e a complexidade dos métodos.
+
+_____________________________________________________________________________
+
+TP1 – Parte 3
+
+Explorando as músicas do Spotify de 2023
+
+Nesta etapa você deverá implementar os algoritmos de ordenação bubble sort, shell sort e
+quick sort. Ordene seus dados nos três métodos primeiramente pelo nome da música e depois
+faça uma nova ordenação em todos os métodos pelo nome do artista. Capture o tempo gasto
+para cada ordenação.
+Registre em arquivo texto o tempo de cada ordenação (não é necessário fazer este registro pelo
+programa, pode ser feito manualmente pelo aluno ou grupo), além disso calcule quantas
+operações foram feitas com o volume de dados e a complexidade dos métodos.
+
+_____________________________________________________________________________
+
+TP1 – Parte 4
+
+Explorando as músicas do Spotify de 2023
+
+Nesta etapa você deverá implementar os algoritmos de ordenação heapsort e mergesort.
+Ordene seus dados nos dois métodos primeiramente pelo nome da música e depois faça uma
+nova ordenação em todos os métodos pelo nome do artista. Capture o tempo gasto para cada
+ordenação.
 Registre em arquivo texto o tempo de cada ordenação (não é necessário fazer este registro pelo
 programa, pode ser feito manualmente pelo aluno ou grupo), além disso calcule quantas
 operações foram feitas com o volume de dados e a complexidade dos métodos.
