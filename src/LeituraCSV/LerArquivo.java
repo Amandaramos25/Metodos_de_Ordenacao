@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class LerArquivo {
   private static String nomeArquivo =  "./dados/spotify_2023.csv";
 
-  public static ArrayList<Musica> ListarMusicas(){
+  public ArrayList<Musica> ListarMusicas(){
     ArrayList<Musica> lista = new ArrayList<>();
     try {
       //Abrir Leitor
@@ -46,73 +46,81 @@ public class LerArquivo {
           primeiraLinha = false;
           continue;
         }
+        ArrayList<String> attributes = new ArrayList<>();
+        StringBuilder currentAttribute = new StringBuilder();
+        boolean insideQuotes = false;
+        int parenthesesCount = 0;
 
-        String sem_tratamento_de_aspas = "";
-        String sem_tratamento_de_parenteses = "";
-        int indiceAspas = 0;
-        int indiceParen = 0;
-        for(int i=0;i<linha.length();i++){
-            
-          char caractere = linha.charAt(i);
-          linha = linha.replaceAll("\\[", "");
-          linha = linha.replaceAll("\\]", "");
-          
-          //tratamento das aspas
-          if(caractere=='\"'){
-            indiceAspas++;
-          }
-          if(indiceAspas==1){
-            sem_tratamento_de_aspas = sem_tratamento_de_aspas + caractere;
-          }
-          else if(indiceAspas==2){
-            indiceAspas=0;
-            String semvirgula = sem_tratamento_de_aspas.replaceAll(",", ".");
-            linha = linha.replaceAll(sem_tratamento_de_aspas, semvirgula);
-            
-            sem_tratamento_de_aspas = "";
-            semvirgula = "";
-          }
-
-          
+        for (char c : linha.toCharArray()) {
+            if (c == '(') {
+                parenthesesCount++;
+                currentAttribute.append(c);
+            } else if (c == ')') {
+                if (parenthesesCount > 0) {
+                    parenthesesCount--;
+                    currentAttribute.append(c);
+                } else {
+                    currentAttribute.append('.');
+                }
+            } else if (c == '"') {
+                insideQuotes = !insideQuotes;
+                currentAttribute.append(c);
+            } else if (c == ',' && (insideQuotes)) {
+                currentAttribute.append('.');
+            } else if (c == ',' && !insideQuotes) {
+                // Vírgula fora de aspas e parênteses
+                attributes.add(currentAttribute.toString().trim());
+                currentAttribute.setLength(0);
+            } else {
+                currentAttribute.append(c);
+            }
         }
-        //System.out.println(linha);
-        
-        linha = linha.replaceAll("\"", "");
 
-        String[] partes = linha.split(",");
-
-        partes[11] = partes[11].replaceAll(" ", "");
-
-        for(int j=0;j<partes.length;j++){
-          if(partes[j]==""){
-            partes[j] = "0";
+        // Adicione o último atributo após o loop
+        attributes.add(currentAttribute.toString().trim());
+        //System.out.println("Tamanho: "+attributes.size());
+        for (int i = 0; i < attributes.size(); i++) {
+          String attribute = attributes.get(i);
+          attribute = attribute.replaceAll("[\"'()]", "");
+          if(attribute==""){
+            attribute="0";
           }
-          //System.out.println(partes[j]+": indice "+j);
-        }
-        nome_musica = partes[0];
-        nome_artista = partes[1];
-        numero_artistas = Integer.parseInt(partes[2]);
-        ano_lancado = Integer.parseInt(partes[3]);
-        mes_lancado = Integer.parseInt(partes[4]);
-        dia_lancado = Integer.parseInt(partes[5]);
-        spotify_numero_playlist = Integer.parseInt(partes[6]);
-        spotify_ranking = Integer.parseInt(partes[7]);
-        streams = partes[8];
-        apple_numero_playlist = Integer.parseInt(partes[9]);
-        apple_ranking = Integer.parseInt(partes[10]);
-        deezer_numero_playlist = partes[11];
-        deezer_ranking = Integer.parseInt(partes[12]);
-        shazam_ranking = Double.parseDouble(partes[13]);
-        bpm = Integer.parseInt(partes[14]);
-        key = partes[15];
-        mode = partes[16];
-        danceability = Integer.parseInt(partes[17]);
-        valence = Integer.parseInt(partes[18]);
-        energy = Integer.parseInt(partes[19]);
-        acousticness = Integer.parseInt(partes[20]);
-        instrumentalness = Integer.parseInt(partes[21]);
-        liveness = Integer.parseInt(partes[22]);
-        speechiness = Integer.parseInt(partes[23]);
+          attributes.set(i, attribute);
+      }
+
+        // Converta o ArrayList em um vetor
+        String[] attributesArray = attributes.toArray(new String[0]);
+
+        // Exiba os atributos separados por vírgulas
+        //for (String attribute : attributesArray) {
+        //    System.out.println(attribute);
+        //}
+       
+
+        nome_musica = attributesArray[0];
+        nome_artista = attributesArray[1];
+        numero_artistas = Integer.parseInt(attributesArray[2]);
+        ano_lancado = Integer.parseInt(attributesArray[3]);
+        mes_lancado = Integer.parseInt(attributesArray[4]);
+        dia_lancado = Integer.parseInt(attributesArray[5]);
+        spotify_numero_playlist = Integer.parseInt(attributesArray[6]);
+        spotify_ranking = Integer.parseInt(attributesArray[7]);
+        streams = attributesArray[8];
+        apple_numero_playlist = Integer.parseInt(attributesArray[9]);
+        apple_ranking = Integer.parseInt(attributesArray[10]);
+        deezer_numero_playlist = attributesArray[11];
+        deezer_ranking = Integer.parseInt(attributesArray[12]);
+        shazam_ranking = Double.parseDouble(attributesArray[13]);
+        bpm = Integer.parseInt(attributesArray[14]);
+        key = attributesArray[15];
+        mode = attributesArray[16];
+        danceability = Integer.parseInt(attributesArray[17]);
+        valence = Integer.parseInt(attributesArray[18]);
+        energy = Integer.parseInt(attributesArray[19]);
+        acousticness = Integer.parseInt(attributesArray[20]);
+        instrumentalness = Integer.parseInt(attributesArray[21]);
+        liveness = Integer.parseInt(attributesArray[22]);
+        speechiness = Integer.parseInt(attributesArray[23]);
 
         //criar  objeto Musica
         Musica m = new Musica(nome_musica, nome_artista, numero_artistas, ano_lancado, mes_lancado, dia_lancado, spotify_numero_playlist, spotify_ranking, streams, apple_numero_playlist, apple_ranking, deezer_numero_playlist, deezer_ranking, shazam_ranking, bpm, key, mode, danceability, valence, energy, acousticness, instrumentalness, liveness, speechiness);
