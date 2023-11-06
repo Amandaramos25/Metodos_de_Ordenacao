@@ -81,6 +81,7 @@ public class Ordenacao extends LerArquivo{
             }
             nomeMusic[i + 1] = aux;
             j = j + 1;
+            Contador();
         }
 
         imprmirVetor(nomeMusic, n);
@@ -98,8 +99,8 @@ public class Ordenacao extends LerArquivo{
             for(int j=i+1; j<n; j++){
         		if(nomeArtista[j].compareTo(nomeArtista[min]) < 0){
                     min = j; 
-                    Contador();
 		        }
+                Contador();
             }
             if(nomeArtista[i].compareTo(nomeArtista[min]) != 0){
                 String aux = nomeArtista[i];
@@ -130,6 +131,7 @@ public class Ordenacao extends LerArquivo{
             }
             nomeArtista[i + 1] = aux;
             j = j + 1;
+            Contador();
         }
 
         imprmirVetor(nomeArtista, n);
@@ -183,6 +185,7 @@ public class Ordenacao extends LerArquivo{
     
         while(h < n) {
             h = h * 3 + 1;
+            Contador();
         }
     
         h = h / 3;
@@ -199,6 +202,7 @@ public class Ordenacao extends LerArquivo{
                     Contador();
                 }
                 nomeMusic[j] = c;
+                Contador();
             }
             h = h / 2;
         }
@@ -214,6 +218,7 @@ public class Ordenacao extends LerArquivo{
     
         while(h < n) {
             h = h * 3 + 1;
+            Contador();
         }
     
         h = h / 3;
@@ -230,6 +235,7 @@ public class Ordenacao extends LerArquivo{
                     Contador();
                 }
                 nomeArtista[j] = c;
+                Contador();
             }
             h = h / 2;
         }
@@ -260,6 +266,7 @@ public class Ordenacao extends LerArquivo{
                 i++;
                 j--;
             }
+            Contador();
             };
             /* recursion */
             if (left < j)
@@ -292,6 +299,7 @@ public class Ordenacao extends LerArquivo{
                 i++;
                 j--;
             }
+            Contador();
             };
             /* recursion */
             if (left2 < j)
@@ -403,6 +411,7 @@ public class Ordenacao extends LerArquivo{
 
     public void intercalar(String[] nome, String[] nomeAux, int ini, int meio, int fim) {
          for(int k = ini; k <= fim; k++){
+            Contador();
             nomeAux[k] = nome[k];
          }
         int i = ini;
