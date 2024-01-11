@@ -2,7 +2,6 @@ TP1 – Parte 1
 
 Explorando as músicas do Spotify de 2023
 
-Trabalho pode ser feito individualmente ou em dupla.
 Uma base de dados (dataset) contém as músicas mais tocadas no Spotify em 2023. Para cada
 música guardaram as seguintes informações:
  track_name: Name of the song
@@ -29,51 +28,9 @@ música guardaram as seguintes informações:
  instrumentalness_%: Amount of instrumental content in the song
  liveness_%: Presence of live performance elements
  speechiness_%: Amount of spoken words in the song
-Faça um programa que leia esta base de dados. Crie as estruturas necessárias para armazenar
-estes dados em memória principal toda vez que o arquivo for lido. Observe que neste
-momento não estamos preocupados com o tamanho do arquivo.
+O programa lê esta base de dados. Foram criadas as estruturas necessárias para armazenar
+estes dados em memória principal toda vez que o arquivo for lido. Foi implementado os algoritmos de ordenação por seleção, inserção, bubble sort, shell sort,
+quick sort, heapsort e mergesort, ordenando primeiro pelo nome da musica e depois pelo nome do artista.
 
 Fonte do dataset: https://www.kaggle.com/datasets/nelgiriyewithana/top-spotify-songs-
 2023/data
-
-_____________________________________________________________________________
-
-TP1 – Parte 2
-
-Explorando as músicas do Spotify de 2023
-
-Nesta etapa você deverá implementar os algoritmos de ordenação por seleção e inserção.
-Ordene seus dados em ambos os métodos primeiramente pelo nome da música e depois faça
-uma nova ordenação em ambos os métodos pelo nome do artista. Capture o tempo gasto para
-cada ordenação.
-Registre em arquivo texto o tempo de cada ordenação (não é necessário fazer este registro pelo
-programa, pode ser feito manualmente pelo aluno ou grupo), além disso calcule quantas
-operações foram feitas com o volume de dados e a complexidade dos métodos.
-
-_____________________________________________________________________________
-
-TP1 – Parte 3
-
-Explorando as músicas do Spotify de 2023
-
-Nesta etapa você deverá implementar os algoritmos de ordenação bubble sort, shell sort e
-quick sort. Ordene seus dados nos três métodos primeiramente pelo nome da música e depois
-faça uma nova ordenação em todos os métodos pelo nome do artista. Capture o tempo gasto
-para cada ordenação.
-Registre em arquivo texto o tempo de cada ordenação (não é necessário fazer este registro pelo
-programa, pode ser feito manualmente pelo aluno ou grupo), além disso calcule quantas
-operações foram feitas com o volume de dados e a complexidade dos métodos.
-
-_____________________________________________________________________________
-
-TP1 – Parte 4
-
-Explorando as músicas do Spotify de 2023
-
-Nesta etapa você deverá implementar os algoritmos de ordenação heapsort e mergesort.
-Ordene seus dados nos dois métodos primeiramente pelo nome da música e depois faça uma
-nova ordenação em todos os métodos pelo nome do artista. Capture o tempo gasto para cada
-ordenação.
-Registre em arquivo texto o tempo de cada ordenação (não é necessário fazer este registro pelo
-programa, pode ser feito manualmente pelo aluno ou grupo), além disso calcule quantas
-operações foram feitas com o volume de dados e a complexidade dos métodos.
